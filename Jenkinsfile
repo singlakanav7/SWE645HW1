@@ -4,7 +4,7 @@ pipeline {
         stage('Publish') { 
             steps {
                 script {
-                    docker.withRegistry("", "docker-hub-ksingla") {
+                    docker.withRegistry("", "Docker-hub-ksingla") {
                         def customImage = docker.build("ksingla/swe645-fall2020-hw1")
                         customImage.push()
                     }
